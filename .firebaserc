@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rottenpotatoes-fb149": {
+      "hosting": {
+        "rottenPotatoes": [
+          "rottenpotatoes-fb149"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rottenpotatoes-fb149"
+  }
+}
