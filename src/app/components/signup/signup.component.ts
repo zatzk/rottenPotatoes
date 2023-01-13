@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
+
+
+
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     const password = control.get('password')?.value;
@@ -17,6 +20,9 @@ export function passwordsMatchValidator(): ValidatorFn {
     return null;
   }
 }
+
+
+
 
 @Component({
   selector: 'app-signup',
@@ -56,7 +62,6 @@ export class SignupComponent implements OnInit{
   get confirmPassword() {
     return this.signUpForm.get('confirmPassword')
   }
-
   submit() {
     if(!this.signUpForm.valid) return;
 

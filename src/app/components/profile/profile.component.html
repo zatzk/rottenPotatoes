@@ -1,0 +1,17 @@
+<div class="profile-container">
+  <div *ngIf="authService.currentUser$ | async as user" class="profile-modal">
+    <div class="imghandler">
+      <img src="" class="rounded-circle" width="32" height="32" />
+    </div>
+    <div class="form-group">
+      <input disabled type="text" placeholder="{{user.displayName}}" class="form-control" />
+    </div>
+    <div class="form-group ">
+      <input disabled type="text" placeholder="{{user.email}}" class="form-control" />
+
+    </div>
+    <div class="btn-container">
+      <button (click)="logout()" class="btn btn-dark">Logout</button>
+    </div>
+  </div>
+</div>

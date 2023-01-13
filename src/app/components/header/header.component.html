@@ -1,1 +1,18 @@
-<p>header works!</p>
+<div class="header-container">
+  <div class="logo" (click)="goToHome()">
+    Rotten Potatoes
+  </div>
+  <div
+    class="logout"
+    (click)="goToProfile()"
+    *ngIf="authService.currentUser$ | async as user"
+    >
+    <img
+    src=""
+    class="rounded-circle"
+    width="32"
+    height="32"
+    />
+    {{user.displayName}}
+  </div>
+</div>
